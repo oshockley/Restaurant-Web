@@ -1,38 +1,102 @@
-/* style.css */
+/* General reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fff8f0;
-  color: #333;
 }
 
+/* Header styling */
 header {
-  background-color: #8b0000;
+  background-color: #d62828;
   color: white;
-  padding: 1rem;
+  padding: 20px;
   text-align: center;
 }
-
 nav a {
-  margin: 0 10px;
   color: white;
+  margin: 0 10px;
   text-decoration: none;
 }
 
+/* Hero section */
 .hero {
   text-align: center;
-  padding: 2rem;
+  padding: 20px;
 }
 
-.hero img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
+/* Slider section */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 300px;
+  overflow: hidden;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #8b0000;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 10;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
   color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+/* Menu image container */
+.menu-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-image-container img {
+    display: block;
+}
+
+/* Button overlay */
+.button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-overlay:hover {
+    background-color: #e5533c; /* Slightly darker shade */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
 }
