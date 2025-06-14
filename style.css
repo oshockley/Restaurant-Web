@@ -7,12 +7,12 @@ body {
 /* Header styling */
 header {
   background-color: #d62828;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 20px;
   text-align: center;
 }
 nav a {
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 0 10px;
   text-decoration: none;
 }
@@ -69,7 +69,9 @@ nav a {
 }
 
 .menu-image-container img {
-    display: block;
+    width: 100%; /* Match slider image width */
+    height: 300px; /* Match slider container height */
+    object-fit: cover; /* Ensure the image fits nicely */
 }
 
 /* Button overlay */
@@ -100,3 +102,73 @@ nav a {
     text-align: center;
     margin: 20px auto;
 }
+
+/* Hours and Location Section */
+.hours-and-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d62828; /* Red background */
+    border: 3px solid #ffffff; /* Dark border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.hours-and-location h2 {
+    font-size: 1.8em;
+    color: #3f2a2a; /* White text for contrast */
+    margin-bottom: 10px;
+}
+
+.hours-and-location p {
+    font-size: 1.2em;
+    color: #fff; /* White text for readability */
+    margin: 5px 0;
+}
+
+/* Make a Reservation Section */
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.reservation h2 {
+    font-size: 1.8em;
+    color: #d62828; /* Match header color */
+    margin-bottom: 10px;
+}
+
+.reservation p {
+    font-size: 1.2em;
+    color: #333; /* Dark text for readability */
+    margin: 5px 0;
+}
+
+.reservation strong {
+    color: #d62828; /* Highlight important text */
+}
+
+.reservation-link {
+    color: #d62828; /* Match header color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.reservation-link:hover {
+    text-decoration: underline;
+    color: #b22222; /* Slightly darker shade for hover effect */
+}
+
