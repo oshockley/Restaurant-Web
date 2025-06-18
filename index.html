@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <h1>Trapazino</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact</a>
-            <a href="reservations.html">Reservations</a>
-        </nav>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-area">
+                <span class="flag-icon">🇮🇹</span>
+                <span class="site-title">Trapazino</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active"><span>Home</span></a>
+                <a href="menu.html" class="nav-link"><span>Menu</span></a>
+                <a href="contact.html" class="nav-link"><span>Contact</span></a>
+                <a href="reservations.html" class="nav-link"><span>Reservations</span></a>
+            </nav>
+            <a href="reservations.html" class="header-cta">Book a Table</a>
+        </div>
     </header>
 
     <section class="hero">
@@ -23,35 +29,64 @@
         <p>Welcome to your favorite Italian Restuarant</p>
     </section>
 
-    <div class="slider">
+    <div class="slider italian-slider">
+        <button class="slider-btn prev" aria-label="Previous Slide">&#10094;</button>
         <div class="slide active">
-            <img src="images/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.webp" alt="Restaurant Image 1" width="300" height="200"/>
+            <img src="images/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.webp" alt="Hand Made Italian Pizza" width="340" height="220"/>
             <div class="caption">Hand Made Italian Pizza</div>
         </div>
         <div class="slide">
-            <img src="images/Spicy-Penne-Pasta_-done.png" alt="Restaurant Image 2" width="300" height="200"/>
+            <img src="images/Spicy-Penne-Pasta_-done.png" alt="Our Famous Penne Pasta" width="340" height="220"/>
             <div class="caption">Our Famous Penne Pasta</div>
         </div>
         <div class="slide">
-            <img src="images/Garlic-Butter.jpg" alt="Restaurant Image 3" width="300" height="200"/>
+            <img src="images/Garlic-Butter.jpg" alt="One of a Kind Bread & Wine!" width="340" height="220"/>
             <div class="caption">One of a Kind Bread & Wine!</div>
         </div>
-    </div>
-
-    <div class="menu">
-        <h2>Want to See Our Menu?</h2>
-        <div class="menu-image-container">
-            <img src="images/shutterstock-152854481.jpg" alt="Menu Image" width="300" height="200"/>
-            <a href="menu.html" class="button-overlay">View Menu</a>
+        <button class="slider-btn next" aria-label="Next Slide">&#10095;</button>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
     </div>
 
-    <div class="hours and location">
-        <h2>Hours and Location</h2>
-        <p>Monday to Friday: 11:00 AM - 10:00 PM</p>
-        <p>Saturday: 12:00 PM - 11:00 PM</p>        
-        <p>Sunday: Closed</p>
-        <p>123 Italian Street, Rome, Italy</p>
+    <div class="menu highlight-menu">
+        <h2>Ready to Tempt Your Taste Buds?</h2>
+        <div class="menu-image-container">
+            <img src="images/shutterstock-152854481.jpg" alt="Menu Image" width="340" height="220"/>
+            <a href="menu.html" class="button-overlay menu-cta">
+                <span>View Our Menu</span>
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-left:8px;" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+        </div>
+        <p class="menu-desc">Discover authentic Italian flavors. <strong>Click to see what’s cooking!</strong></p>
+    </div>
+
+    <div class="hours-location">
+        <h2><span class="icon">⏰</span> Visit Us <span class="icon">📍</span></h2>
+        <div class="hours-list">
+            <div class="hours-item open">
+                <strong>Mon–Fri:</strong> <span class="badge">11:00 AM – 10:00 PM</span>
+            </div>
+            <div class="hours-item open">
+                <strong>Saturday:</strong> <span class="badge">12:00 PM – 11:00 PM</span>
+            </div>
+            <div class="hours-item closed">
+                <strong>Sunday:</strong> <span class="badge closed">Closed</span>
+            </div>
+        </div>
+        <div class="location">
+            <strong>123 Italian Street, Rome, Italy</strong>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=12.4924%2C41.8902%2C12.4924%2C41.8902&amp;layer=mapnik"
+                    style="border:1px solid #ccc;" width="300" height="150" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="visit-now">
+                <span>We’re waiting for you! <strong>Drop by today!</strong></span>
+            </div>
+        </div>
     </div>
 
     <div class="reservation">
@@ -61,6 +96,14 @@
         <p>
             <a href="https://www.opentable.com/" target="_blank" rel="noopener" class="reservation-link">Reserve a Table on OpenTable</a>
         </p>
+    </div>
+
+    <div class="italian-flag-container">
+        <div class="italian-flag">
+            <div class="flag-stripe green"></div>
+            <div class="flag-stripe white"></div>
+            <div class="flag-stripe red"></div>
+        </div>
     </div>
 
     <footer>

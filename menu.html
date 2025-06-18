@@ -5,10 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Italian Trapazino - Menu</title>
     <link rel="stylesheet" href="style.css"/>
+    <style>
+        body {
+            background: linear-gradient(120deg, #fffbe6 0%, #ffe0b2 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            color: #222;
+        }
+        header {
+            background: linear-gradient(90deg, #009246 0%, #fff 50%, #CE2B37 100%);
+            padding: 24px 0 12px 0;
+            text-align: center;
+            border-bottom: 3px solid #009246;
+        }
+        header h1 {
+            color: #CE2B37;
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            letter-spacing: 1.5px;
+        }
+        nav a {
+            color: #009246;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 18px;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        nav a:hover, nav a:focus {
+            color: #CE2B37;
+        }
+        .menu {
+            max-width: 950px;
+            margin: 36px auto 36px auto;
+            background: linear-gradient(90deg, #009246 0%, #fff 50%, #CE2B37 100%);
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(0, 146, 70, 0.10), 0 1.5px 6px rgba(206,43,55,0.07);
+            padding: 38px 28px 32px 28px;
+            border: 2px solid #009246;
+        }
+        .menu h2 {
+            color: #009246;
+            font-size: 1.6em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            border-left: 8px solid #CE2B37;
+            padding-left: 14px;
+            letter-spacing: 1px;
+        }
+        .menu-category {
+            margin-bottom: 36px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+        .menu-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px #00924620;
+            padding: 18px 14px 16px 14px;
+            position: relative;
+            transition: transform 0.18s, box-shadow 0.18s;
+            border: 2px solid #009246;
+            min-height: 170px;
+        }
+        .menu-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 24px #CE2B3720;
+            border-color: #CE2B37;
+        }
+        .menu-card-header {
+            display: flex;
+            height: 8px;
+            margin-bottom: 10px;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+        .flag-stripe {
+            flex: 1;
+            height: 100%;
+        }
+        .flag-stripe.green { background: #009246; }
+        .flag-stripe.white { background: #fff; }
+        .flag-stripe.red   { background: #CE2B37; }
+        .menu-card h3 {
+            font-size: 1.18em;
+            color: #009246;
+            margin: 0 0 6px 0;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .menu-card p {
+            font-size: 1em;
+            color: #444;
+            margin: 0 0 10px 0;
+        }
+        .menu-price {
+            display: inline-block;
+            background: linear-gradient(90deg, #009246 60%, #CE2B37 100%);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.08em;
+            border-radius: 8px;
+            padding: 4px 14px;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 1px 4px #00924620;
+        }
+        footer {
+            text-align: center;
+            padding: 18px 0 10px 0;
+            background: #fff;
+            color: #888;
+            font-size: 1em;
+            border-top: 2px solid #CE2B37;
+            margin-top: 40px;
+        }
+        @media (max-width: 700px) {
+            .menu { padding: 18px 2vw 18px 2vw; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Menu</h1>
+        <h1>Trapazino Menu</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="menu.html">Menu</a>
@@ -18,19 +140,230 @@
     </header>
 
     <section class="menu">
-        <h2>Appetizers</h2>
-        <ul>
-            <li>Bruschetta</li>
-            <li>Caprese Salad</li>
-            <li>Stuffed Mushrooms</li>
-        </ul>
+        <!-- Appetizers -->
+        <h2>Antipasti (Appetizers)</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Bruschetta</h3>
+                <p>Grilled bread, garlic, tomatoes, basil, olive oil</p>
+                <span class="menu-price">€7</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Caprese Salad</h3>
+                <p>Fresh mozzarella, tomatoes, basil, balsamic glaze</p>
+                <span class="menu-price">€9</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Stuffed Mushrooms</h3>
+                <p>Mushrooms filled with cheese, herbs, and breadcrumbs</p>
+                <span class="menu-price">€8</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Arancini</h3>
+                <p>Sicilian rice balls, mozzarella, peas, ragù</p>
+                <span class="menu-price">€8</span>
+            </div>
+        </div>
 
-        <h2>Main Courses</h2>
-        <ul>
-            <li>Spaghetti Carbonara</li>
-            <li>Margherita Pizza</li>
-            <li>Lasagna</li>
-        </ul>
+        <!-- Main Courses -->
+        <h2>Primi & Secondi (Main Courses)</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Spaghetti Carbonara</h3>
+                <p>Classic Roman pasta, pancetta, egg, pecorino</p>
+                <span class="menu-price">€14</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Lasagna al Forno</h3>
+                <p>Layered pasta, beef ragù, béchamel, parmesan</p>
+                <span class="menu-price">€16</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Risotto ai Funghi</h3>
+                <p>Creamy risotto with wild mushrooms</p>
+                <span class="menu-price">€15</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Pollo alla Parmigiana</h3>
+                <p>Breaded chicken, tomato sauce, mozzarella</p>
+                <span class="menu-price">€17</span>
+            </div>
+        </div>
+
+        <!-- Pizzas -->
+        <h2>Pizze (Pizzas)</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Margherita</h3>
+                <p>San Marzano tomato, mozzarella, basil</p>
+                <span class="menu-price">€12</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Quattro Formaggi</h3>
+                <p>Mozzarella, gorgonzola, parmesan, fontina</p>
+                <span class="menu-price">€14</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Diavola</h3>
+                <p>Spicy salami, mozzarella, tomato sauce</p>
+                <span class="menu-price">€13</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Prosciutto e Funghi</h3>
+                <p>Ham, mushrooms, mozzarella, tomato sauce</p>
+                <span class="menu-price">€14</span>
+            </div>
+        </div>
+
+        <!-- Wines -->
+        <h2>Vini (Wines)</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Chianti Classico</h3>
+                <p>Robust Tuscan red wine, glass</p>
+                <span class="menu-price">€8</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Pinot Grigio</h3>
+                <p>Crisp Venetian white wine, glass</p>
+                <span class="menu-price">€7</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Prosecco</h3>
+                <p>Refreshing sparkling wine, glass</p>
+                <span class="menu-price">€7</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Montepulciano d’Abruzzo</h3>
+                <p>Full-bodied red wine, glass</p>
+                <span class="menu-price">€8</span>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <h2>Dolci (Desserts)</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Tiramisu</h3>
+                <p>Espresso-soaked ladyfingers, mascarpone, cocoa</p>
+                <span class="menu-price">€6</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Cannoli Siciliani</h3>
+                <p>Crispy pastry, sweet ricotta, chocolate chips</p>
+                <span class="menu-price">€6</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Panna Cotta</h3>
+                <p>Creamy vanilla pudding, berry coulis</p>
+                <span class="menu-price">€6</span>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-header">
+                    <span class="flag-stripe green"></span>
+                    <span class="flag-stripe white"></span>
+                    <span class="flag-stripe red"></span>
+                </div>
+                <h3>Gelato Misto</h3>
+                <p>Selection of Italian ice creams</p>
+                <span class="menu-price">€5</span>
+            </div>
+        </div>
     </section>
 
     <footer>

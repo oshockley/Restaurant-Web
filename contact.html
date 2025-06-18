@@ -4,12 +4,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - My Restaurant</title>
+  <title>Contact - Trapazino</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact {
+      max-width: 600px;
+      margin: 40px auto 36px auto;
+      background: linear-gradient(90deg, #009246 0%, #fff 50%, #CE2B37 100%);
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0, 146, 70, 0.10), 0 1.5px 6px rgba(206,43,55,0.07);
+      padding: 38px 28px 32px 28px;
+      border: 2px solid #009246;
+      text-align: center;
+    }
+    .contact h2 {
+      color: #CE2B37;
+      font-size: 2em;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #fff3e0;
+    }
+    .contact-info {
+      margin-bottom: 24px;
+      font-size: 1.1em;
+      color: #009246;
+      font-weight: 500;
+    }
+    .contact-info span {
+      display: block;
+      margin: 6px 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+    label {
+      font-weight: bold;
+      color: #009246;
+      margin-bottom: 4px;
+      align-self: flex-start;
+    }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      max-width: 420px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid #009246;
+      font-size: 1em;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      margin-bottom: 4px;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+      border-color: #CE2B37;
+      box-shadow: 0 2px 8px #CE2B3720;
+      outline: none;
+    }
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    button[type="submit"] {
+      background: linear-gradient(90deg, #009246 0%, #CE2B37 100%);
+      color: #fff;
+      font-size: 1.15em;
+      font-weight: bold;
+      padding: 12px 38px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 12px #00924640;
+      transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+      letter-spacing: 0.5px;
+      margin-top: 8px;
+    }
+    button[type="submit"]:hover, button[type="submit"]:focus {
+      background: linear-gradient(90deg, #CE2B37 0%, #009246 100%);
+      box-shadow: 0 4px 24px #CE2B3760;
+      transform: scale(1.06);
+      color: #fff;
+    }
+    .visit-details {
+      margin-top: 28px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 12px;
+      box-shadow: 0 2px 8px #00924620;
+      color: #222;
+      font-size: 1.08em;
+      border: 2px solid #CE2B37;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .visit-details strong {
+      color: #009246;
+      font-size: 1.1em;
+    }
+    .visit-details .flag {
+      font-size: 1.5em;
+      margin-bottom: 6px;
+    }
+    @media (max-width: 700px) {
+      .contact { padding: 18px 2vw 18px 2vw; }
+      .visit-details { font-size: 1em; }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <h1>Contact Trapazino</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
@@ -19,20 +125,33 @@
   </header>
 
   <section class="contact">
-    <h2>Send us a message</h2>
+    <h2>We'd Love to Hear From You!</h2>
+    <div class="contact-info">
+      <span><strong>Phone:</strong> <a href="tel:+390612345678" style="color:#CE2B37;text-decoration:none;">+39 06 1234 5678</a></span>
+      <span><strong>Email:</strong> <a href="mailto:info@trapazino.it" style="color:#CE2B37;text-decoration:none;">info@trapazino.it</a></span>
+    </div>
     <form>
-      <label>Name:</label><br />
-      <input type="text" name="name" placeholder="Enter your name" /><br />
-      <label>Email:</label><br />
-      <input type="email" name="email" title="Enter your email address" placeholder="Enter your email" /><br />
-      <label>Message:</label><br />
-      <textarea name="message" title="Enter your message" placeholder="Write your message here"></textarea><br />
-      <button type="submit">Send</button>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" title="Enter your email address" placeholder="Enter your email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" title="Enter your message" placeholder="Write your message here" required></textarea>
+
+      <button type="submit">Send Message</button>
     </form>
+    <div class="visit-details">
+      <div class="flag">🇮🇹</div>
+      <strong>Visit Us:</strong>
+      <div>123 Italian Street, Rome, Italy</div>
+      <div><strong>Hours:</strong> Mon–Fri 11:00–22:00, Sat 12:00–23:00, Sun Closed</div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 My Restaurant</p>
+    <p>&copy; 2025 Trapazino. All rights reserved.</p>
   </footer>
 </body>
 </html>
